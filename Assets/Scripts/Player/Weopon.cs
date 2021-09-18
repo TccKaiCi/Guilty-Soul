@@ -15,6 +15,8 @@ public class Weopon : MonoBehaviour
         {
             shoot();
         }
+
+
     }
     void shoot()
     {
