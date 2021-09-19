@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
+
     void Start()
     {
         rigidbody2D.velocity = transform.right * speedBullet;
