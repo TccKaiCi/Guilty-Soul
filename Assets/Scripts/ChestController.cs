@@ -10,7 +10,10 @@ public class ChestController : MonoBehaviour
     {
         if( !isOpen )
         {
+           
             Debug.Log("Chest is open now...");
+
         }
+
     }
 }

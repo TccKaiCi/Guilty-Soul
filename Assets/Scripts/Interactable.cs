@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
+    public Animator animator;
     public bool isInRange;
     public KeyCode interacKey;
     public UnityEvent interAction;
@@ -22,6 +23,11 @@ public class Interactable : MonoBehaviour
         {
             if (Input.GetKeyDown(interacKey))
             {
+                if (animator.GetBool("IsOpen")) animator.SetBool("IsOpen", false);
+                else
+                {
+                    animator.SetBool("IsOpen", true);
+                }
                 interAction.Invoke();
             }
         }
@@ -40,6 +46,7 @@ public class Interactable : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            animator.SetBool("IsOpen", false);
             Debug.Log("Di ra xa");
             isInRange = false;
         }
