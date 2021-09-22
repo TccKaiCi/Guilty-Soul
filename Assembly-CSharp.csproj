@@ -53,6 +53,7 @@
      <Compile Include="Assets\AssetsDownloaded\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
      <Compile Include="Assets\Scripts\Player\GameController.cs" />
      <Compile Include="Assets\Scripts\Menu\Exit.cs" />
+     <Compile Include="Assets\Scripts\Menu\BackgroundMusic.cs" />
      <None Include="Assets\AssetsDownloaded\Hero Knight - Pixel Art\ColorSwap\Sprites-ColorSwap.shader" />
     <Reference Include="UnityEngine">
         <HintPath>T:/Unity Editor/2020.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
