@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed;
     public float jumpSpeed;
     public bool isFacingright;
+    
     private Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
