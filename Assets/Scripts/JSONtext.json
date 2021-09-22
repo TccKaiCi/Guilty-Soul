@@ -1,19 +1,5 @@
 {
-	"player": [
-		{	
 			"name": "HiamKaito",
-			"health": 120,
-			"mana": 10
-		},
-			{	
-			"name": "Prohgodz",
-			"health": 130,
-			"mana": 2
-		},
-			{	
-			"name": "Trong7a2002",
-			"health": 50,
-			"mana": 30
-		}
-	]
+			"health": 4,
+			"mana": 0
 }
