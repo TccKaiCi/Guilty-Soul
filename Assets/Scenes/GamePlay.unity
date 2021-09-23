@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1195986496}
-  bulletPrefab: {fileID: 7964570056991343389, guid: 2d71016eeaa8fac47a218c23a49dbcd1, type: 3}
+  bulletPrefab: {fileID: 6524340157748715265, guid: 2d71016eeaa8fac47a218c23a49dbcd1, type: 3}
 --- !u!114 &628950406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,6 +1054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b033a5b94c9acae4a9907f92d006d284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  health: 0
+  mana: 0
   playerStat:
     name: 
     health: 0
@@ -2283,7 +2286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195986495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.241, y: -0.097, z: 0}
+  m_LocalPosition: {x: 0.113, y: -0.066, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 628950404}
@@ -3471,7 +3474,7 @@ GameObject:
   - component: {fileID: 1559603675}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15269,11 +15272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2718464837839840824, guid: 4acdd6bc01d4eea4ea9e9fe820de1254, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.1
+      value: 39.71
       objectReference: {fileID: 0}
     - target: {fileID: 2718464837839840824, guid: 4acdd6bc01d4eea4ea9e9fe820de1254, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 2718464837839840824, guid: 4acdd6bc01d4eea4ea9e9fe820de1254, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16363,7 +16366,8 @@ MonoBehaviour:
   ant: {fileID: 628950403}
   slotPanel: {fileID: 1986530052}
   player: {fileID: 0}
-  currenthealth: 0
+  c_hp: 0
+  c_mana: 0
 --- !u!1 &2002630169
 GameObject:
   m_ObjectHideFlags: 0
