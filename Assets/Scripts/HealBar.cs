@@ -35,7 +35,7 @@ public class HealBar : MonoBehaviour
             Debug.Log("change hp");
             drawHpbar();
             p_hp = player.health;
-            
+                        
         }
     }
     public void drawHpbar()

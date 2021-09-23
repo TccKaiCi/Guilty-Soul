@@ -31,6 +31,7 @@ public class Interactable : MonoBehaviour
                 interAction.Invoke();
             }
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -10,13 +10,16 @@ public class Player : MonoBehaviour
     public int mana;
     public Stats playerStat = new Stats();
     public TextAsset statFile;
+    public int m_ghostTime;
+    private int ghostTime;
 
     private void Awake()
     {
+        ghostTime = m_ghostTime;
         GenerateStat();
+        if(pl)
     }
    
-    [System.Serializable]
     public class Stats
     {
         public string name;
@@ -31,5 +34,21 @@ public class Player : MonoBehaviour
         name = playerStat.name;
         mana = playerStat.mana;
     }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        
+        if (col.CompareTag("Enemy"))
+        {
+            ghostTime--;
+            if (ghostTime == 0)
+            {
+                health--;
+                ghostTime = m_ghostTime;
+            }
+        }
+        
+    }
+  
 }
 
