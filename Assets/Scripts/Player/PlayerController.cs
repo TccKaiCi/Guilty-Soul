@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidbody2D.velocity.y) < 0.1f)
         {
             rigidbody2D.AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
-            
         }
       
     }

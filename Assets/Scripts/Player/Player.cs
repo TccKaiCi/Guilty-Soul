@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 [System.Serializable]
 public class Player : MonoBehaviour
@@ -13,27 +14,45 @@ public class Player : MonoBehaviour
     public int m_ghostTime;
     private int ghostTime;
     public bool is_col = false;
-    private void Awake()
+    private Transform lastBonFire;
+    Stats playerStat = new Stats();
+
+    private void Start()
     {
         maxHeal = health;
         ghostTime = m_ghostTime;
         GenerateStat();
-       
+        SavePack sv = new SavePack();
+        sv.l_Stats.Add(playerStat);
+        string strOut = JsonUtility.ToJson(sv);
+        File.WriteAllText(Application.dataPath + "/data.json", strOut);
     }
     private void Update()
     {
         DecreasHP(1);
     }
-
+    [System.Serializable] // khong co dong nay khoi 
     public class Stats
     {
         public string name;
         public int health;
         public int mana;
     }
+    [System.Serializable]
+    public class Spawn
+    {
+        public int id;
+        public string description;
+    }
+    [System.Serializable]
+    public class SavePack
+    {
+        public List<Stats> l_Stats = new List<Stats>();
+        public List<Spawn> l_spawn = new List<Spawn>();
+    }
     public void GenerateStat()
     {
-        Stats playerStat = new Stats();
+       
         playerStat = JsonUtility.FromJson<Stats>(statFile.text);
         health = playerStat.health;
         name = playerStat.name;
@@ -50,11 +69,13 @@ public class Player : MonoBehaviour
             ghostTime--;
             if (ghostTime == 0)
             {
-                health = health -damePoint;       
+                health = health - damePoint;       
                 ghostTime = m_ghostTime;
             }
         }
     }
+    //respawn
+  
     //this 2 code funtiont just for test heal decreas not exist in logic gamne because Enermy deal dame not like Player self hurt like this
     private void OnTriggerEnter2D(Collider2D col)
     {
