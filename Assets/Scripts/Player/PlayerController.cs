@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed;
     public float jumpSpeed;
     public bool isFacingright;
-    
+    Animator animator;
     private Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidbody2D.velocity.y) < 0.1f)
         {
             rigidbody2D.AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
+            
         }
       
     }
