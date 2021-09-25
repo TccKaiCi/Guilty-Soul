@@ -69,8 +69,9 @@
      <Compile Include="Assets\AssetsDownloaded\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
      <Compile Include="Assets\Scripts\Dialog\DialogManaged.cs" />
      <Compile Include="Assets\Scripts\Player\GameController.cs" />
-     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
      <Compile Include="Assets\Scripts\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
+     <Compile Include="Assets\Scripts\FileTool.cs" />
      <None Include="Assets\AssetsDownloaded\Hero Knight - Pixel Art\ColorSwap\Sprites-ColorSwap.shader" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
