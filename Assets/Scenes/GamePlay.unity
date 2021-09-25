@@ -1443,7 +1443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
-  health: 0
+  health: 3
   maxHeal: 0
   mana: 0
   statFile: {fileID: 4900000, guid: c589186a407a2f844a39409501064041, type: 3}

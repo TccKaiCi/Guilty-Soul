@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
             this.health = health;
             this.mana = mana;
         }
-        public Stats() { }
+        public Stats() {}
     }
     [System.Serializable]
     public class Spawn
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
          Stats currentStat = new Stats(name,health,mana);
         sv.l_Stats.Add(currentStat);
         FileTool ft = new FileTool();
-        ft.JsonWriter("data.json", sv);
+        ((IJson)ft).JsonWriter("data.json", sv);
         Debug.Log("save"+currentStat.health);
     }
   
