@@ -1,23 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+[System.Serializable]
+public abstract class Enemy : MonoBehaviour
 {
+    public int id;
+    public string name;
     public int health;
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
+    public abstract void TakeDamage(int damage);
 
-        if (health <= 0 )
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
-    }
+    public abstract void infor();
 }

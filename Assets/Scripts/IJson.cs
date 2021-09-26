@@ -6,3 +6,7 @@ interface IJson
     public void JsonWriter(string filename, Player.SavePack data);
     public  Player.SavePack JsonReader(TextAsset saveFile);
 }
+interface ISceneManagement
+{
+    public void SceneGoto();
+}
