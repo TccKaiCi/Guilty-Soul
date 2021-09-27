@@ -8,6 +8,8 @@ public class Cherry : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Player player = collision.GetComponent<Player>();
+            player.health ++;
             Score.scoreValue += 1;
             Destroy(gameObject);
         }
