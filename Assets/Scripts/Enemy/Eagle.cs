@@ -6,6 +6,11 @@ public class Eagle : Enemy
     public int idInput;
     public int armor;
 
+    private void Start()
+    {
+        base.heathBar.SetHealthBar(base.health, base.maxHealth);
+    }
+
     public Eagle()
     {
 
@@ -34,9 +39,11 @@ public class Eagle : Enemy
             base.health -= damage;
         }
 
+        base.heathBar.SetHealthBar(base.health, base.maxHealth);
+
         if (base.health <= 0)
         {
-//            Die();
+            Die();
         }
     }
 }

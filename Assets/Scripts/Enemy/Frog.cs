@@ -5,6 +5,11 @@ public class Frog : Enemy
 {
     public int idInput;
 
+    private void Start()
+    {
+        base.heathBar.SetHealthBar(base.health, base.maxHealth);
+    }
+
     public Frog() { }
 
     public Frog(int id, string name, int health)
@@ -23,9 +28,12 @@ public class Frog : Enemy
     public override void TakeDamage(int damage)
     {
         base.health -= damage;
+
+        base.heathBar.SetHealthBar(base.health, base.maxHealth);
+
         if (base.health <= 0)
         {
-           // Die();
+            Die();
         }
     }
 
