@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [System.Serializable]
@@ -33,6 +34,7 @@ public class Eagle : Enemy
 
     public override void TakeDamage(int damage)
     {
+        VisualDameTaken(damage.ToString());
         damage -= this.armor;
         if (damage > 0)
         {
@@ -46,4 +48,6 @@ public class Eagle : Enemy
             Die();
         }
     }
+
+  
 }

@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private Transform lastBonFire;
     Stats playerStat = new Stats();
     SavePack sv = new SavePack();
-    private void Start()
+    private void Awake()
     {
         maxHeal = health;
         ghostTime = m_ghostTime;
