@@ -21,7 +21,6 @@ public abstract class Enemy : MonoBehaviour
         if (floatingText)
         {
             GameObject prefab = Instantiate(floatingText, gameObject.GetComponent<Transform>().position, Quaternion.identity);
-            prefab.transform.SetParent(gameObject.transform);
             prefab.GetComponentInChildren<TextMeshPro>().text = text;
         }
     }
