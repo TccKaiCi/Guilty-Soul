@@ -12,15 +12,20 @@ public abstract class Enemy : MonoBehaviour
     public HealthBar heathBar;
     private void Awake()
     {
+        
     }
     public abstract void TakeDamage(int damage);
 
     public abstract void infor();
     public void VisualDameTaken(string text)
     {
+        Transform Pos = gameObject.GetComponent<Transform>();
+        float posX = Random.Range(Pos.position.x - 2f, Pos.position.x + 2f);
+        float posY = Random.Range(Pos.position.y - 2f, Pos.position.y + 2f);
         if (floatingText)
         {
-            GameObject prefab = Instantiate(floatingText, gameObject.GetComponent<Transform>().position, Quaternion.identity);
+            Vector3 spawnPos = new Vector3(posX, posY);
+            GameObject prefab = Instantiate(floatingText, spawnPos, Quaternion.identity);
             prefab.GetComponentInChildren<TextMeshPro>().text = text;
         }
     }

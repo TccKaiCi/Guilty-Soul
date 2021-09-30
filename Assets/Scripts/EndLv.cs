@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,8 @@ public class EndLv : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
-        {
+        { 
+      
             isEnd_lv = true;
             SceneController scn = new SceneController();
             scn.SceneGoto("Menu");

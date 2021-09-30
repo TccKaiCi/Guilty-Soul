@@ -7,9 +7,9 @@ public class Enemys : MonoBehaviour
     public List<Enemy> listEnemy = new List<Enemy>();
 
     public Frog findById_Frog(int id)
-    {
+    {   
         Frog result = new Frog();
-
+        
         foreach (Enemy e in listEnemy)
         {
             Debug.Log(e.id);
