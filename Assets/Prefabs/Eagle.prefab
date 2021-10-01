@@ -353,6 +353,7 @@ MonoBehaviour:
   name: Eagle
   health: 100
   maxHealth: 100
+  floatingText: {fileID: 0}
   heathBar: {fileID: 5489536429579108765}
   idInput: 1
   armor: 10
