@@ -1975,6 +1975,10 @@ PrefabInstance:
       propertyPath: floatingText
       value: 
       objectReference: {fileID: 5417660218522192893, guid: 29a51b211975da349b521da0338d38da, type: 3}
+    - target: {fileID: 5306086432392272160, guid: 4acdd6bc01d4eea4ea9e9fe820de1254, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5984640025082202577, guid: 4acdd6bc01d4eea4ea9e9fe820de1254, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
