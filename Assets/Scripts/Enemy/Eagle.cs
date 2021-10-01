@@ -55,7 +55,7 @@ public class Eagle : Enemy
     {
         Player target = FindObjectOfType<Player>();
         Sense sense = GetComponentInChildren<Sense>();
-        if(sense.tLock=true)
+        if(sense.tLock==true)
         {
             Rigidbody2D rig = GetComponent<Rigidbody2D>();
             rig.AddForce(target.transform.position-gameObject.transform.position);
