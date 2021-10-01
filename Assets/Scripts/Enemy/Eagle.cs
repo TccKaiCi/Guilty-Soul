@@ -51,10 +51,19 @@ public class Eagle : Enemy
     {
 
     }
-    public void move(Transform target)
+    public void FlyingAtk()
     {
-        
+        Player target = FindObjectOfType<Player>();
+        Sense sense = GetComponentInChildren<Sense>();
+        if(sense.tLock=true)
+        {
+            Rigidbody2D rig = GetComponent<Rigidbody2D>();
+            rig.AddForce(target.transform.position-gameObject.transform.position);
+        }   
     }
-
+    private void Update()
+    {
+        FlyingAtk();
+    }
 
 }
